@@ -4,8 +4,8 @@ from fastapi import FastAPI, HTTPException, Request, status
 from pydantic import BaseModel
 from textblob import TextBlob
 
-from db import SessionLocal, Complaint, Sentiment, Category, Status
-from ai import classify_category
+from app.db import SessionLocal, Complaint, Sentiment, Category, Status
+from app.ai import classify_category
 
 
 app = FastAPI(title="Complaints API")

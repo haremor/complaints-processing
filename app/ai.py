@@ -1,7 +1,7 @@
 import os
 from openai import AsyncOpenAI
 
-from db import Category
+from app.db import Category
 
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
