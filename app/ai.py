@@ -5,13 +5,6 @@ from app.db import Category
 
 client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-SYSTEM = "Ты - помощник службы поддержки."
-USER_TMPL = (
-    'Определи категорию жалобы: "{text}". '
-    "Варианты: техническая, оплата, другое. "
-    "Ответ только одним словом."
-)
-
 
 async def classify_category(text):
     try:
